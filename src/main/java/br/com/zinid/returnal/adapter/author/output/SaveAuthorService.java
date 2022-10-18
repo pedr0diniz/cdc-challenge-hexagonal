@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class SaveAuthorService implements AuthorOutputPort {
 
-    private AuthorRepository authorRepository;
+    private final AuthorRepository authorRepository;
     public SaveAuthorService(AuthorRepository authorRepository) {
         this.authorRepository = authorRepository;
     }

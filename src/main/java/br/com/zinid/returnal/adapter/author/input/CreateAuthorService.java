@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class CreateAuthorService implements AuthorInputPort {
 
-    private AuthorOutputPort saveAuthorService;
+    private final AuthorOutputPort saveAuthorService;
     public CreateAuthorService(AuthorOutputPort saveAuthorService) {
         this.saveAuthorService = saveAuthorService;
     }

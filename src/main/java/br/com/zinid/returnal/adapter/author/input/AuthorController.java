@@ -13,13 +13,13 @@ import javax.validation.Valid;
 @RequestMapping("/author")
 public class AuthorController {
 
-    private AuthorInputPort authorService;
+    private final AuthorInputPort authorService;
     public AuthorController(AuthorInputPort authorService) {
         this.authorService = authorService;
     }
 
     @PostMapping
-    public ResponseEntity<?> CreateAuthor(@RequestBody @Valid AuthorRequest authorRequest) {
+    public ResponseEntity<?> createAuthor(@RequestBody @Valid AuthorRequest authorRequest) {
          authorService.create(authorRequest.toDomain());
          return ResponseEntity.ok().build();
     }
