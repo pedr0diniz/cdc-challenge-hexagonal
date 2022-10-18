@@ -1,6 +1,8 @@
 package br.com.zinid.returnal.adapter.author.input;
 
+import br.com.zinid.returnal.adapter.author.output.AuthorEntity;
 import br.com.zinid.returnal.application.domain.author.Author;
+import br.com.zinid.returnal.validation.UniqueField;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -8,7 +10,7 @@ import javax.validation.constraints.Size;
 
 public class AuthorRequest {
 
-    @NotBlank @Email
+    @NotBlank @Email @UniqueField(fieldName = "email", entityClass = AuthorEntity.class)
     private String email;
 
     @NotBlank
