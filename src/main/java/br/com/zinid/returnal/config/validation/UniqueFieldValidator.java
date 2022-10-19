@@ -1,4 +1,4 @@
-package br.com.zinid.returnal.validation;
+package br.com.zinid.returnal.config.validation;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

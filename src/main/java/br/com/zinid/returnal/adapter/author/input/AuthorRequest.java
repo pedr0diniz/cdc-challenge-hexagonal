@@ -2,7 +2,7 @@ package br.com.zinid.returnal.adapter.author.input;
 
 import br.com.zinid.returnal.adapter.author.output.AuthorEntity;
 import br.com.zinid.returnal.application.domain.author.Author;
-import br.com.zinid.returnal.validation.UniqueField;
+import br.com.zinid.returnal.config.validation.UniqueField;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;

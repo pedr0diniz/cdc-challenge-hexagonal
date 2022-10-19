@@ -1,4 +1,4 @@
-package br.com.zinid.returnal.exception;
+package br.com.zinid.returnal.config.exception;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 

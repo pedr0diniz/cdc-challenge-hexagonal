@@ -1,4 +1,4 @@
-package br.com.zinid.returnal.validation;
+package br.com.zinid.returnal.config.validation;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
