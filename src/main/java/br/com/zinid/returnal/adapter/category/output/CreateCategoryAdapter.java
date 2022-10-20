@@ -1,14 +1,14 @@
 package br.com.zinid.returnal.adapter.category.output;
 
 import br.com.zinid.returnal.application.domain.category.Category;
-import br.com.zinid.returnal.application.domain.category.CategoryOutputPort;
+import br.com.zinid.returnal.application.domain.category.output.CreateCategoryOutputPort;
 import org.springframework.stereotype.Service;
 
 @Service
-public class SaveCategoryService implements CategoryOutputPort {
+public class CreateCategoryAdapter implements CreateCategoryOutputPort {
 
     private final CategoryRepository categoryRepository;
-    public SaveCategoryService(CategoryRepository categoryRepository) {
+    public CreateCategoryAdapter(CategoryRepository categoryRepository) {
         this.categoryRepository = categoryRepository;
     }
 

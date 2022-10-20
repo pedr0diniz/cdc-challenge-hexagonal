@@ -1,6 +1,7 @@
 package br.com.zinid.returnal.adapter.book.output;
 
 import br.com.zinid.returnal.adapter.author.output.AuthorEntity;
+import br.com.zinid.returnal.adapter.author.output.AuthorResponse;
 import br.com.zinid.returnal.adapter.category.output.CategoryEntity;
 import br.com.zinid.returnal.application.domain.book.Book;
 
@@ -93,6 +94,11 @@ public class BookEntity {
                 categoryEntity.toDomain(),
                 authorEntity.toDomain()
         );
+    }
+
+    public BookResponse toResponse() {
+        return new BookResponse(title, summary, index, price, numberOfPages, ISBN, airingDate,
+                categoryEntity.toResponse(), authorEntity.toResponse());
     }
 
 }

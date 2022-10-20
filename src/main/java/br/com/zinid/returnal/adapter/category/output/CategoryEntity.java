@@ -36,6 +36,10 @@ public class CategoryEntity {
         return new Category(name);
     }
 
+    public CategoryResponse toResponse() {
+        return new CategoryResponse(name);
+    }
+
     public static CategoryEntity convertFromDomain(Category category) {
         return new CategoryEntity(category.getName());
     }

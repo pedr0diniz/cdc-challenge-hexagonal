@@ -1,4 +1,7 @@
-package br.com.zinid.returnal.application.domain.category;
+package br.com.zinid.returnal.application.domain.category.input;
+
+import br.com.zinid.returnal.application.domain.category.Category;
+import br.com.zinid.returnal.application.domain.category.output.GetCategoryByIdOutputPort;
 
 import java.util.Optional;
 

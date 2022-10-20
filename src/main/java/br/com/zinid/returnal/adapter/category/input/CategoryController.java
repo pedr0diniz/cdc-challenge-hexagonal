@@ -1,6 +1,6 @@
 package br.com.zinid.returnal.adapter.category.input;
 
-import br.com.zinid.returnal.application.domain.category.CategoryInputPort;
+import br.com.zinid.returnal.application.domain.category.input.CreateCategoryInputPort;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,8 +13,8 @@ import javax.validation.Valid;
 @RequestMapping("/category")
 public class CategoryController {
 
-    private final CategoryInputPort createCategoryService;
-    public CategoryController(CategoryInputPort createCategoryService) {
+    private final CreateCategoryInputPort createCategoryService;
+    public CategoryController(CreateCategoryInputPort createCategoryService) {
         this.createCategoryService = createCategoryService;
     }
 

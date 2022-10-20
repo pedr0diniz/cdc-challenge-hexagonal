@@ -1,16 +1,16 @@
 package br.com.zinid.returnal.adapter.author.output;
 
 import br.com.zinid.returnal.application.domain.author.Author;
-import br.com.zinid.returnal.application.domain.author.GetAuthorByIdOutputPort;
+import br.com.zinid.returnal.application.domain.author.output.GetAuthorByIdOutputPort;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
 @Service
-public class GetAuthorByIdService implements GetAuthorByIdOutputPort {
+public class GetAuthorByIdAdapter implements GetAuthorByIdOutputPort {
 
     private final AuthorRepository authorRepository;
-    public GetAuthorByIdService(AuthorRepository authorRepository) {
+    public GetAuthorByIdAdapter(AuthorRepository authorRepository) {
         this.authorRepository = authorRepository;
     }
 

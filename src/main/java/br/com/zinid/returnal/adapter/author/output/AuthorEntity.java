@@ -40,6 +40,10 @@ public class AuthorEntity {
         return new Author(email, name, description, registrationDate);
     }
 
+    public AuthorResponse toResponse() {
+        return new AuthorResponse(email, name, description);
+    }
+
     public static AuthorEntity convertFromDomain(Author author) {
         return new AuthorEntity(author.getEmail(), author.getName(), author.getDescription(), author.getRegistrationDate());
     }

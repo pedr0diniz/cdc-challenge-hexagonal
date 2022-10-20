@@ -1,17 +1,17 @@
 package br.com.zinid.returnal.adapter.category.output;
 
 import br.com.zinid.returnal.application.domain.category.Category;
-import br.com.zinid.returnal.application.domain.category.GetCategoryByIdOutputPort;
+import br.com.zinid.returnal.application.domain.category.output.GetCategoryByIdOutputPort;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
 @Service
-public class GetCategoryByIdService implements GetCategoryByIdOutputPort {
+public class GetCategoryByIdAdapter implements GetCategoryByIdOutputPort {
 
     private final CategoryRepository categoryRepository;
 
-    public GetCategoryByIdService(CategoryRepository categoryRepository) {
+    public GetCategoryByIdAdapter(CategoryRepository categoryRepository) {
         this.categoryRepository = categoryRepository;
     }
 

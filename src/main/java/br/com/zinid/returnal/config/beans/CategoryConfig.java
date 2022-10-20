@@ -1,11 +1,11 @@
 package br.com.zinid.returnal.config.beans;
 
-import br.com.zinid.returnal.adapter.category.output.GetCategoryByIdService;
-import br.com.zinid.returnal.adapter.category.output.SaveCategoryService;
-import br.com.zinid.returnal.application.domain.category.CategoryInputPort;
-import br.com.zinid.returnal.application.domain.category.CreateCategoryUseCase;
-import br.com.zinid.returnal.application.domain.category.GetCategoryByIdInputPort;
-import br.com.zinid.returnal.application.domain.category.GetCategoryByIdUseCase;
+import br.com.zinid.returnal.adapter.category.output.GetCategoryByIdAdapter;
+import br.com.zinid.returnal.adapter.category.output.CreateCategoryAdapter;
+import br.com.zinid.returnal.application.domain.category.input.CreateCategoryInputPort;
+import br.com.zinid.returnal.application.domain.category.input.CreateCategoryUseCase;
+import br.com.zinid.returnal.application.domain.category.input.GetCategoryByIdInputPort;
+import br.com.zinid.returnal.application.domain.category.input.GetCategoryByIdUseCase;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -13,13 +13,13 @@ import org.springframework.context.annotation.Configuration;
 public class CategoryConfig {
 
     @Bean
-    public CategoryInputPort createCategoryInputPort(SaveCategoryService saveCategoryService) {
-        return new CreateCategoryUseCase(saveCategoryService);
+    public CreateCategoryInputPort createCategoryInputPort(CreateCategoryAdapter createCategoryAdapter) {
+        return new CreateCategoryUseCase(createCategoryAdapter);
     }
 
     @Bean
-    public GetCategoryByIdInputPort createGetCategoryByIdInputPort(GetCategoryByIdService getCategoryByIdService) {
-        return new GetCategoryByIdUseCase(getCategoryByIdService);
+    public GetCategoryByIdInputPort createGetCategoryByIdInputPort(GetCategoryByIdAdapter getCategoryByIdAdapter) {
+        return new GetCategoryByIdUseCase(getCategoryByIdAdapter);
     }
 
 }

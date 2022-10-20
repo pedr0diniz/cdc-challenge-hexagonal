@@ -1,6 +1,6 @@
 package br.com.zinid.returnal.adapter.author.input;
 
-import br.com.zinid.returnal.application.domain.author.AuthorInputPort;
+import br.com.zinid.returnal.application.domain.author.input.CreateAuthorInputPort;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,8 +13,8 @@ import javax.validation.Valid;
 @RequestMapping("/author")
 public class AuthorController {
 
-    private final AuthorInputPort authorService;
-    public AuthorController(AuthorInputPort authorService) {
+    private final CreateAuthorInputPort authorService;
+    public AuthorController(CreateAuthorInputPort authorService) {
         this.authorService = authorService;
     }
 

@@ -1,4 +1,8 @@
-package br.com.zinid.returnal.application.domain.author;
+package br.com.zinid.returnal.application.domain.author.input;
+
+import br.com.zinid.returnal.application.domain.author.Author;
+import br.com.zinid.returnal.application.domain.author.input.GetAuthorByIdInputPort;
+import br.com.zinid.returnal.application.domain.author.output.GetAuthorByIdOutputPort;
 
 import java.util.Optional;
 
