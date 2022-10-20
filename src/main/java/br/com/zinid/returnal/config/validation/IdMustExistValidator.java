@@ -11,38 +11,33 @@ import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 import java.util.List;
 
-public class UniqueFieldValidator implements ConstraintValidator<UniqueField, String> {
+public class IdMustExistValidator implements ConstraintValidator<IdMustExist, Long> {
 
-    private final Logger logger = LoggerFactory.getLogger(UniqueFieldValidator.class);
-
-    private String entityAttribute;
+    private final Logger logger = LoggerFactory.getLogger(IdMustExistValidator.class);
     private Class<?> klass;
 
     @PersistenceContext
     private EntityManager entityManager;
 
     @Override
-    public void initialize(UniqueField toValidate) {
-        entityAttribute = toValidate.fieldName();
+    public void initialize(IdMustExist toValidate) {
         klass = toValidate.entityClass();
     }
 
     @Override
-    public boolean isValid(String fieldValue, ConstraintValidatorContext context) {
-        Query query = entityManager.createQuery("select 1 from " +
+    public boolean isValid(Long id, ConstraintValidatorContext constraintValidatorContext) {
+        Query query = entityManager.createQuery("select x from " +
                 klass.getName() +
-                " where " +
-                entityAttribute +
-                " = :input");
+                " x where id = :input");
 
-        query.setParameter("input", fieldValue);
+        query.setParameter("input", id);
 
         List<?> list = query.getResultList();
 
         Assert.state(list.size() <= 1, "More than one record has been found for :input");
 
-        if (!list.isEmpty()) {
-            logger.warn(entityAttribute + " is already in use");
+        if (list.isEmpty()) {
+            logger.warn("id does not exist");
             return false;
         }
 

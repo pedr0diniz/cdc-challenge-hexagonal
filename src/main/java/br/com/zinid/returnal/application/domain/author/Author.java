@@ -32,4 +32,10 @@ public class Author {
         this.registrationDate = OffsetDateTime.now();
     }
 
+    public Author(String email, String name, String description, OffsetDateTime registrationDate) {
+        this.email = email;
+        this.name = name;
+        this.description = description;
+        this.registrationDate = registrationDate;
+    }
 }

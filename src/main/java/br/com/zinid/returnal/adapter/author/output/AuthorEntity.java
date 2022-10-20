@@ -24,11 +24,20 @@ public class AuthorEntity {
     public AuthorEntity() {
     }
 
+    // For the BookEntity to use while retrieving the id.
+    public AuthorEntity(Long id) {
+        this.id = id;
+    }
+
     public AuthorEntity(String email, String name, String description, OffsetDateTime registrationDate) {
         this.email = email;
         this.name = name;
         this.description = description;
         this.registrationDate = OffsetDateTime.now();
+    }
+
+    public Author toDomain() {
+        return new Author(email, name, description, registrationDate);
     }
 
     public static AuthorEntity convertFromDomain(Author author) {

@@ -1,8 +1,11 @@
 package br.com.zinid.returnal.config.beans;
 
+import br.com.zinid.returnal.adapter.author.output.GetAuthorByIdService;
 import br.com.zinid.returnal.adapter.author.output.SaveAuthorService;
 import br.com.zinid.returnal.application.domain.author.AuthorInputPort;
 import br.com.zinid.returnal.application.domain.author.CreateAuthorUseCase;
+import br.com.zinid.returnal.application.domain.author.GetAuthorByIdInputPort;
+import br.com.zinid.returnal.application.domain.author.GetAuthorByIdUseCase;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -18,5 +21,10 @@ public class AuthorConfig {
     // Therefore, we pass SaveAuthorService as a parameter for the CreateAuthorUseCase implementation.
     public AuthorInputPort createAuthorInputPort(SaveAuthorService saveAuthorService) {
         return new CreateAuthorUseCase(saveAuthorService);
+    }
+
+    @Bean
+    public GetAuthorByIdInputPort createGetAuthorByIdInputPort (GetAuthorByIdService getAuthorByIdService) {
+        return new GetAuthorByIdUseCase(getAuthorByIdService);
     }
 }

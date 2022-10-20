@@ -19,12 +19,21 @@ public class CategoryEntity {
     public CategoryEntity() {
     }
 
+    // For the BookEntity to use while retrieving the id.
+    public CategoryEntity(Long id) {
+        this.id = id;
+    }
+
     public CategoryEntity(String name) {
         this.name = name;
     }
 
     public String getName() {
         return name;
+    }
+
+    public Category toDomain() {
+        return new Category(name);
     }
 
     public static CategoryEntity convertFromDomain(Category category) {
