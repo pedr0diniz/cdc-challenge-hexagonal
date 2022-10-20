@@ -17,8 +17,8 @@ public class AuthorConfig {
     @Bean
     // Why not inject an CreateAuthorOutputPort?
     // Because the interface is not managed by Spring.
-    // Its implementation, CreateAuthorService, however, is managed.
-    // Therefore, we pass CreateAuthorService as a parameter for the CreateAuthorUseCase implementation.
+    // Its implementation, CreateAuthorAdapter, however, is managed.
+    // Therefore, we pass CreateAuthorAdapter as a parameter for the CreateAuthorUseCase implementation.
     public CreateAuthorInputPort createAuthorInputPort(CreateAuthorAdapter createAuthorAdapter) {
         return new CreateAuthorUseCase(createAuthorAdapter);
     }

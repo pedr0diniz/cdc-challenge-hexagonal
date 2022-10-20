@@ -5,15 +5,15 @@ import br.com.zinid.returnal.application.domain.book.output.CreateBookOutputPort
 
 public class CreateBookUseCase implements CreateBookInputPort {
 
-    private final CreateBookOutputPort createBookService;
+    private final CreateBookOutputPort createBookAdapter;
 
-    public CreateBookUseCase(CreateBookOutputPort createBookService) {
-        this.createBookService = createBookService;
+    public CreateBookUseCase(CreateBookOutputPort createBookAdapter) {
+        this.createBookAdapter = createBookAdapter;
     }
 
 
     @Override
     public void create(Book book) {
-        createBookService.save(book);
+        createBookAdapter.save(book);
     }
 }

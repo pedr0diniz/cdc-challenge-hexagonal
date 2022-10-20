@@ -5,13 +5,13 @@ import br.com.zinid.returnal.application.domain.category.output.CreateCategoryOu
 
 public class CreateCategoryUseCase implements CreateCategoryInputPort {
 
-    private final CreateCategoryOutputPort createCategoryService;
-    public CreateCategoryUseCase(CreateCategoryOutputPort createCategoryService) {
-        this.createCategoryService = createCategoryService;
+    private final CreateCategoryOutputPort createCategoryAdapter;
+    public CreateCategoryUseCase(CreateCategoryOutputPort createCategoryAdapter) {
+        this.createCategoryAdapter = createCategoryAdapter;
     }
 
     @Override
     public void create(Category category) {
-        createCategoryService.save(category);
+        createCategoryAdapter.save(category);
     }
 }

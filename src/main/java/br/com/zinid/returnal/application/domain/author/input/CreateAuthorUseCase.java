@@ -5,13 +5,13 @@ import br.com.zinid.returnal.application.domain.author.output.CreateAuthorOutput
 
 public class CreateAuthorUseCase implements CreateAuthorInputPort {
 
-    private final CreateAuthorOutputPort createAuthorService;
-    public CreateAuthorUseCase(CreateAuthorOutputPort createAuthorService) {
-        this.createAuthorService = createAuthorService;
+    private final CreateAuthorOutputPort createAuthorAdapter;
+    public CreateAuthorUseCase(CreateAuthorOutputPort createAuthorAdapter) {
+        this.createAuthorAdapter = createAuthorAdapter;
     }
 
     @Override
     public void create(Author author) {
-        createAuthorService.save(author);
+        createAuthorAdapter.save(author);
     }
 }
