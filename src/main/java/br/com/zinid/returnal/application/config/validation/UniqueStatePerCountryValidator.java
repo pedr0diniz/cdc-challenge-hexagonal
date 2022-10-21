@@ -1,4 +1,4 @@
-package br.com.zinid.returnal.config.validation;
+package br.com.zinid.returnal.application.config.validation;
 
 import br.com.zinid.returnal.adapter.state.input.StateRequest;
 import org.springframework.util.Assert;
@@ -10,13 +10,13 @@ import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 import java.util.List;
 
-public class UniquePerCountryValidator implements ConstraintValidator<UniquePerCountry, StateRequest> {
+public class UniqueStatePerCountryValidator implements ConstraintValidator<UniqueStatePerCountry, StateRequest> {
 
     @PersistenceContext
     private EntityManager entityManager;
 
     @Override
-    public void initialize(UniquePerCountry toValidate) {}
+    public void initialize(UniqueStatePerCountry toValidate) {}
 
     @Override
     public boolean isValid(StateRequest stateRequest, ConstraintValidatorContext validatorContext) {

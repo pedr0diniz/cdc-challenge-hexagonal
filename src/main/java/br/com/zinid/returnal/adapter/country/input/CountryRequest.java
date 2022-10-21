@@ -2,7 +2,7 @@ package br.com.zinid.returnal.adapter.country.input;
 
 import br.com.zinid.returnal.adapter.country.output.CountryEntity;
 import br.com.zinid.returnal.application.domain.country.Country;
-import br.com.zinid.returnal.config.validation.UniqueField;
+import br.com.zinid.returnal.application.config.validation.UniqueField;
 
 import javax.validation.constraints.NotBlank;
 

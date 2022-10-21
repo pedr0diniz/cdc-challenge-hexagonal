@@ -1,4 +1,4 @@
-package br.com.zinid.returnal.config.exception;
+package br.com.zinid.returnal.application.config.exception;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;

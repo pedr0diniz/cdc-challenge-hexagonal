@@ -1,4 +1,4 @@
-package br.com.zinid.returnal.config.beans;
+package br.com.zinid.returnal.application.config.beans;
 
 import br.com.zinid.returnal.adapter.author.output.GetAuthorByIdAdapter;
 import br.com.zinid.returnal.adapter.author.output.CreateAuthorAdapter;

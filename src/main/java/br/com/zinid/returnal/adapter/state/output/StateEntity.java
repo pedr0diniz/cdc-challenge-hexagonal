@@ -17,6 +17,10 @@ public class StateEntity {
     @JoinColumn(name = "country_id")
     private CountryEntity countryEntity;
 
+    public Long getId() {
+        return id;
+    }
+
     public String getName() {
         return name;
     }
@@ -27,6 +31,10 @@ public class StateEntity {
 
     @Deprecated
     public StateEntity() {
+    }
+
+    public StateEntity(Long id) {
+        this.id = id;
     }
 
     public StateEntity(State state) {

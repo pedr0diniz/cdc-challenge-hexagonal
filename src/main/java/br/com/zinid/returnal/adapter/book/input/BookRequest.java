@@ -4,8 +4,8 @@ import br.com.zinid.returnal.adapter.author.output.AuthorEntity;
 import br.com.zinid.returnal.adapter.book.output.BookEntity;
 import br.com.zinid.returnal.adapter.category.output.CategoryEntity;
 import br.com.zinid.returnal.application.domain.book.Book;
-import br.com.zinid.returnal.config.validation.IdMustExist;
-import br.com.zinid.returnal.config.validation.UniqueField;
+import br.com.zinid.returnal.application.config.validation.IdMustExist;
+import br.com.zinid.returnal.application.config.validation.UniqueField;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.validation.constraints.*;

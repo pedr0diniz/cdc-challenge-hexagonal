@@ -2,13 +2,13 @@ package br.com.zinid.returnal.adapter.state.input;
 
 import br.com.zinid.returnal.adapter.country.output.CountryEntity;
 import br.com.zinid.returnal.application.domain.state.State;
-import br.com.zinid.returnal.config.validation.IdMustExist;
-import br.com.zinid.returnal.config.validation.UniquePerCountry;
+import br.com.zinid.returnal.application.config.validation.IdMustExist;
+import br.com.zinid.returnal.application.config.validation.UniqueStatePerCountry;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
-@UniquePerCountry
+@UniqueStatePerCountry
 public class StateRequest {
 
     @NotBlank

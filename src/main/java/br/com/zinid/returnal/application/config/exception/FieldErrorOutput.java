@@ -1,4 +1,4 @@
-package br.com.zinid.returnal.config.exception;
+package br.com.zinid.returnal.application.config.exception;
 
 public class FieldErrorOutput {
 

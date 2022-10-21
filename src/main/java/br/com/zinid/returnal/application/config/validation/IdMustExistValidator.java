@@ -1,4 +1,4 @@
-package br.com.zinid.returnal.config.validation;
+package br.com.zinid.returnal.application.config.validation;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,6 +26,11 @@ public class IdMustExistValidator implements ConstraintValidator<IdMustExist, Lo
 
     @Override
     public boolean isValid(Long id, ConstraintValidatorContext constraintValidatorContext) {
+
+        if (id == null) {
+            return true;
+        }
+
         Query query = entityManager.createQuery("select x from " +
                 klass.getName() +
                 " x where id = :input");

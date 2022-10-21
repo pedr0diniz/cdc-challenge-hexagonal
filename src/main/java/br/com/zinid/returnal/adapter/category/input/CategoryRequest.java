@@ -2,7 +2,7 @@ package br.com.zinid.returnal.adapter.category.input;
 
 import br.com.zinid.returnal.adapter.category.output.CategoryEntity;
 import br.com.zinid.returnal.application.domain.category.Category;
-import br.com.zinid.returnal.config.validation.UniqueField;
+import br.com.zinid.returnal.application.config.validation.UniqueField;
 
 import javax.validation.constraints.NotBlank;
 

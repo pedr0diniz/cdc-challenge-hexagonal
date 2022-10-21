@@ -1,4 +1,4 @@
-package br.com.zinid.returnal.config.beans;
+package br.com.zinid.returnal.application.config.beans;
 
 import br.com.zinid.returnal.adapter.book.output.GetBookDetailsAdapter;
 import br.com.zinid.returnal.adapter.book.output.GetBookListAdapter;

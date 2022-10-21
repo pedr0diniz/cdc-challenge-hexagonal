@@ -1,14 +1,14 @@
-package br.com.zinid.returnal.config.validation;
+package br.com.zinid.returnal.application.config.validation;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
 import java.lang.annotation.*;
 
 @Documented
-@Constraint(validatedBy = UniquePerCountryValidator.class)
+@Constraint(validatedBy = UniqueStatePerCountryValidator.class)
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface UniquePerCountry {
+public @interface UniqueStatePerCountry {
 
     String message() default "already exists in the given country";
 
