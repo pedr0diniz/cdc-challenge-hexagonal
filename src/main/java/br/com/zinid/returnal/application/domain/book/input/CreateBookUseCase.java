@@ -13,7 +13,7 @@ public class CreateBookUseCase implements CreateBookInputPort {
 
 
     @Override
-    public void create(Book book) {
-        createBookAdapter.save(book);
+    public void execute(Book book) {
+        createBookAdapter.create(book);
     }
 }

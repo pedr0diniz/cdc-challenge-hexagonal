@@ -11,7 +11,7 @@ public class CreateCategoryUseCase implements CreateCategoryInputPort {
     }
 
     @Override
-    public void create(Category category) {
-        createCategoryAdapter.save(category);
+    public void execute(Category category) {
+        createCategoryAdapter.create(category);
     }
 }

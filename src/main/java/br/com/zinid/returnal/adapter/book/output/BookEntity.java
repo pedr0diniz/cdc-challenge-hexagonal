@@ -1,7 +1,6 @@
 package br.com.zinid.returnal.adapter.book.output;
 
 import br.com.zinid.returnal.adapter.author.output.AuthorEntity;
-import br.com.zinid.returnal.adapter.author.output.AuthorResponse;
 import br.com.zinid.returnal.adapter.category.output.CategoryEntity;
 import br.com.zinid.returnal.application.domain.book.Book;
 

@@ -13,7 +13,7 @@ public class CreateCategoryAdapter implements CreateCategoryOutputPort {
     }
 
     @Override
-    public void save(Category category) {
+    public void create(Category category) {
         CategoryEntity categoryEntity = CategoryEntity.convertFromDomain(category);
         categoryRepository.save(categoryEntity);
     }

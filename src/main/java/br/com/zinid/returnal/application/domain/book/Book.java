@@ -90,20 +90,4 @@ public class Book {
         this.authorId = authorId;
     }
 
-    @Override
-    public String toString() {
-        return "Book{" +
-                "title='" + title + '\'' +
-                ", summary='" + summary + '\'' +
-                ", index='" + index + '\'' +
-                ", price=" + price +
-                ", numberOfPages=" + numberOfPages +
-                ", ISBN='" + ISBN + '\'' +
-                ", airingDate=" + airingDate +
-                ", category=" + category +
-                ", categoryId=" + categoryId +
-                ", author=" + author +
-                ", authorId=" + authorId +
-                '}';
-    }
 }

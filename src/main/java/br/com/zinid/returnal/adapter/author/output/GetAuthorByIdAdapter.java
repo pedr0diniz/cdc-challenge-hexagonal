@@ -15,7 +15,7 @@ public class GetAuthorByIdAdapter implements GetAuthorByIdOutputPort {
     }
 
     @Override
-    public Optional<Author> getAuthor(Long id) {
+    public Optional<Author> get(Long id) {
         Optional<AuthorEntity> possibleAuthor = authorRepository.findById(id);
         return possibleAuthor.map(AuthorEntity::toDomain);
         //If a value is present, returns an Optional describing (as if by ofNullable) the result of applying the given

@@ -13,7 +13,7 @@ public class CreateAuthorAdapter implements CreateAuthorOutputPort {
     }
 
     @Override
-    public void save(Author author) {
+    public void create(Author author) {
         AuthorEntity authorEntity = AuthorEntity.convertFromDomain(author);
         authorRepository.save(authorEntity);
     }

@@ -11,7 +11,7 @@ public class CreateAuthorUseCase implements CreateAuthorInputPort {
     }
 
     @Override
-    public void create(Author author) {
-        createAuthorAdapter.save(author);
+    public void execute(Author author) {
+        createAuthorAdapter.create(author);
     }
 }

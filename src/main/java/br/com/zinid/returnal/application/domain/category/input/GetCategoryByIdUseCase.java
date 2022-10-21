@@ -15,6 +15,6 @@ public class GetCategoryByIdUseCase implements GetCategoryByIdInputPort {
 
     @Override
     public Optional<Category> execute(Long id) {
-        return getCategoryByIdOutputPort.getCategory(id);
+        return getCategoryByIdOutputPort.get(id);
     }
 }

@@ -14,7 +14,7 @@ public class CreateBookAdapter implements CreateBookOutputPort {
     }
 
     @Override
-    public void save(Book book) {
+    public void create(Book book) {
         BookEntity bookEntity = new BookEntity(book);
         bookRepository.save(bookEntity);
     }

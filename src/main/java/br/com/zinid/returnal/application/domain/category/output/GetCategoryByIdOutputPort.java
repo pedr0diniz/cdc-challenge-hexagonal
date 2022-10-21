@@ -6,6 +6,6 @@ import java.util.Optional;
 
 public interface GetCategoryByIdOutputPort {
 
-    Optional<Category> getCategory(Long id);
+    Optional<Category> get(Long id);
 
 }

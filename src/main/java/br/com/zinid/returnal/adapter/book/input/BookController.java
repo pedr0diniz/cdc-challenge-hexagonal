@@ -38,8 +38,7 @@ public class BookController {
     @PostMapping
     public ResponseEntity<?> createBook(@RequestBody @Valid BookRequest bookRequest) {
         Book book = bookRequest.toDomain();
-        System.out.println(book.toString());
-        createBookUseCase.create(book);
+        createBookUseCase.execute(book);
 
         return ResponseEntity.ok().build();
     }

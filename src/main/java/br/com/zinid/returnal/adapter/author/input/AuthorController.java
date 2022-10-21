@@ -20,7 +20,7 @@ public class AuthorController {
 
     @PostMapping
     public ResponseEntity<?> createAuthor(@RequestBody @Valid AuthorRequest authorRequest) {
-         authorService.create(authorRequest.toDomain());
+         authorService.execute(authorRequest.toDomain());
          return ResponseEntity.ok().build();
     }
 

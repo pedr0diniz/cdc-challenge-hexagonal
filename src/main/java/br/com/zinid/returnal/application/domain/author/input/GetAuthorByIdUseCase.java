@@ -1,7 +1,6 @@
 package br.com.zinid.returnal.application.domain.author.input;
 
 import br.com.zinid.returnal.application.domain.author.Author;
-import br.com.zinid.returnal.application.domain.author.input.GetAuthorByIdInputPort;
 import br.com.zinid.returnal.application.domain.author.output.GetAuthorByIdOutputPort;
 
 import java.util.Optional;
@@ -16,6 +15,6 @@ public class GetAuthorByIdUseCase implements GetAuthorByIdInputPort {
 
     @Override
     public Optional<Author> execute(Long id) {
-        return getAuthorByIdOutputPort.getAuthor(id);
+        return getAuthorByIdOutputPort.get(id);
     }
 }

@@ -4,6 +4,6 @@ import br.com.zinid.returnal.application.domain.category.Category;
 
 public interface CreateCategoryOutputPort {
 
-    void save(Category category);
+    void create(Category category);
 
 }

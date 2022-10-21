@@ -4,6 +4,6 @@ import br.com.zinid.returnal.application.domain.author.Author;
 
 public interface CreateAuthorOutputPort {
 
-    void save(Author author);
+    void create(Author author);
 
 }

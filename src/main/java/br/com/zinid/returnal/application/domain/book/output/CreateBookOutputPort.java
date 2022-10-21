@@ -4,6 +4,6 @@ import br.com.zinid.returnal.application.domain.book.Book;
 
 public interface CreateBookOutputPort {
 
-    void save(Book book);
+    void create(Book book);
 
 }

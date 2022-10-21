@@ -13,14 +13,14 @@ import javax.validation.Valid;
 @RequestMapping("/category")
 public class CategoryController {
 
-    private final CreateCategoryInputPort createCategoryAdapter;
-    public CategoryController(CreateCategoryInputPort createCategoryAdapter) {
-        this.createCategoryAdapter = createCategoryAdapter;
+    private final CreateCategoryInputPort createCategoryUseCase;
+    public CategoryController(CreateCategoryInputPort createCategoryUseCase) {
+        this.createCategoryUseCase = createCategoryUseCase;
     }
 
     @PostMapping
     public ResponseEntity<?> createCategory(@RequestBody @Valid CategoryRequest categoryRequest) {
-        createCategoryAdapter.create(categoryRequest.toDomain());
+        createCategoryUseCase.execute(categoryRequest.toDomain());
         return ResponseEntity.ok().build();
     }
 }

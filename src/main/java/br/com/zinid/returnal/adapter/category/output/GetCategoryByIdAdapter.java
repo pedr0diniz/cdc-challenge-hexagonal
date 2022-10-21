@@ -16,7 +16,7 @@ public class GetCategoryByIdAdapter implements GetCategoryByIdOutputPort {
     }
 
     @Override
-    public Optional<Category> getCategory(Long id) {
+    public Optional<Category> get(Long id) {
         Optional<CategoryEntity> possibleCategory = categoryRepository.findById(id);
         return possibleCategory.map(CategoryEntity::toDomain);
     }
